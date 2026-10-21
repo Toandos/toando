@@ -17,5 +17,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Work in progress
-        run: echo "Work in progress"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup bazel
+        uses: bazel-contrib/setup-bazel@0.19.1
+        with:
+          bazelisk-cache: true
+          disk-cache: ${{ github.workflow }}
+          repository-cache: true
+
+      - name: Bazel build
+        run: bazel build //...
