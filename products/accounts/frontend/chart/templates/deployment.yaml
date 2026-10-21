@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: accounts-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: accounts-webapp
+  template:
+    metadata:
+      labels:
+        app: accounts-webapp
+    spec:
+      containers:
+        - name: accounts-webapp
+          image: ghcr.io/toandos/accounts-webapp:{{ .Chart.AppVersion }}
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"

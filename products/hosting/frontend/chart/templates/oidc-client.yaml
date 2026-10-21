@@ -1,0 +1,19 @@
+apiVersion: hydra.ory.sh/v1alpha1
+kind: OAuth2Client
+metadata:
+  name: {{ .Release.Name }}-oidc-client
+spec:
+  clientName: {{ .Release.Name }}
+  grantTypes:
+    - authorization_code
+  responseTypes:
+    - code
+  redirectUris:
+    - "https://hosting.toando.de/auth/callback"
+  scopeArray:
+    - openid
+    - profile
+    - email
+    - offline_access
+  secretName: {{ .Release.Name }}-oidc-credentials
+  skipConsent: true

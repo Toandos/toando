@@ -1,0 +1,15 @@
+apiVersion: bootstrap.cluster.x-k8s.io/v1beta2
+kind: KubeadmConfigTemplate
+metadata:
+  name: dev-worker-config
+spec:
+  template:
+    spec:
+      joinConfiguration:
+        nodeRegistration:
+          criSocket: /var/run/containerd/containerd.sock
+          kubeletExtraArgs:
+            - name: cgroup-driver
+              value: systemd
+            - name: provider-id
+              value: docker://

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package toando.books.v1alpha1;
+
+option go_package = "github.com/Toandos/apis-go/generated/toando/books/v1alpha1;booksv1alpha1";
+
+service BookService {
+    rpc CreateBook(CreateBookRequest) returns (Book);
+    rpc GetBook(GetBookRequest) returns (Book);
+    rpc ListBooks(ListBooksRequest) returns (ListBooksResponse);
+    rpc DeleteBook(DeleteBookRequest) returns (DeleteBookResponse);
+}
+
+message Book {
+    string id = 1;
+    string title = 2;
+}
+
+message CreateBookRequest {
+    string title = 1;
+}
+
+message GetBookRequest {
+    string id = 1;
+}
+
+message ListBooksRequest {}
+
+message ListBooksResponse {
+    repeated Book books = 1;
+}
+
+message DeleteBookRequest {
+    string id = 1;
+}
+message DeleteBookResponse {}

@@ -1,0 +1,26 @@
+{
+  "name": "@toando/apis",
+  "version": "1.0.0",
+  "description": "Api definitions for interacting with toando products",
+  "type": "module",
+  "files": [
+    "generated/toando"
+  ],
+  "exports": {
+    "./*": "./generated/toando/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toandos/apis.git"
+  },
+  "keywords": [],
+  "author": "xXjojaXx",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Toandos/apis/issues"
+  },
+  "homepage": "https://github.com/Toandos/apis#readme",
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.15.0"
+  }
+}

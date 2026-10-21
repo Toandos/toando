@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package toando.books.v1alpha1;
+
+option go_package = "github.com/Toandos/apis-go/generated/toando/books/v1alpha1;booksv1alpha1";
+
+service SessionService {
+    rpc CreateAnonymousSession(CreateAnonymousSessionRequest) returns (CreateSessionResponse);
+    rpc CreateAuthenticatedSession(CreateAuthenticatedSessionRequest) returns (CreateSessionResponse);
+    rpc GetSession(GetSessionRequest) returns (Session);
+}
+
+message Session {
+    string id = 1;
+    optional string identity_id = 2;
+}
+
+message CreateAnonymousSessionRequest {}
+
+message CreateAuthenticatedSessionRequest {
+    string anonymous_session_id = 1; 
+    string oidc_authorization_code = 2;
+}
+
+message CreateSessionResponse {
+    string token = 1;
+    Session session = 2;
+}
+
+message GetSessionRequest {
+    string token = 1;
+}
