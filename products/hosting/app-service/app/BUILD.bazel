@@ -1,6 +1,14 @@
-load("@rules_go//go:def.bzl", "go_binary")
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "app_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/Toandos/toando/products/hosting/app-service/app",
+    visibility = ["//visibility:private"],
+)
 
 go_binary(
-    name = "hosting_app_service",
-    srcs = ["main.go", "service.go"],
+    name = "app",
+    embed = [":app_lib"],
+    visibility = ["//visibility:public"],
 )

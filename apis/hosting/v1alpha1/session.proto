@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package toando.books.v1alpha1;
+package toando.hosting.v1alpha1;
 
-option go_package = "github.com/Toandos/apis-go/generated/toando/books/v1alpha1;booksv1alpha1";
+option go_package = "github.com/Toandos/toando/apis/hosting/v1alpha1;hostingv1alpha1";
 
 service SessionService {
     rpc CreateAnonymousSession(CreateAnonymousSessionRequest) returns (CreateSessionResponse);

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package toando.books.v1alpha1;
 
-option go_package = "github.com/Toandos/apis-go/generated/toando/books/v1alpha1;booksv1alpha1";
+option go_package = "github.com/Toandos/toando/apis/books/v1alpha1;booksv1alpha1";
 
 service BookService {
     rpc CreateBook(CreateBookRequest) returns (Book);
