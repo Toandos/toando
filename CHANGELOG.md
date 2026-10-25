@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Toandos/toando/compare/v1.2.0...v1.2.1) (2026-10-25)
+
+
+### Bug Fixes
+
+* Casing in ghcr repository ([45ee9e8](https://github.com/Toandos/toando/commit/45ee9e853948eb82f722cfe464a272126adeb67b))
+
 ## [1.2.0](https://github.com/Toandos/toando/compare/v1.1.0...v1.2.0) (2026-10-25)
 
 
