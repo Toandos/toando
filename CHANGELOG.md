@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/Toandos/toando/compare/v1.2.1...v1.2.2) (2026-10-25)
+
+
+### Bug Fixes
+
+* Missing github token permissions ([c93404d](https://github.com/Toandos/toando/commit/c93404d3f5c0cd845d507024a058642182c83ce2))
+
 ## [1.2.1](https://github.com/Toandos/toando/compare/v1.2.0...v1.2.1) (2026-10-25)
 
 
