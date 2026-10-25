@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Toandos/toando/compare/v1.0.0...v1.1.0) (2026-10-24)
+
+
+### Features
+
+* Use gazelle ([6580e88](https://github.com/Toandos/toando/commit/6580e88df95f8436bbabb90ec4b049240db633a6))
+
 ## 1.0.0 (2026-10-21)
 
 
