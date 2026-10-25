@@ -34,6 +34,6 @@ oci_push(
     name = "push_image",
     image = ":app_image",
     remote_tags = ["latest"],
-    repository = "ghcr.io/Toandos/hosting-session-service",
+    repository = "ghcr.io/toandos/hosting-session-service",
     visibility = ["//visibility:public"],
 )
