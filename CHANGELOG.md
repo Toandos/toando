@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/Toandos/toando/compare/v1.1.0...v1.2.0) (2026-10-25)
+
+
+### Features
+
+* Add oci images for services ([eb8958a](https://github.com/Toandos/toando/commit/eb8958aabd86b81f57910a6da58b70aac80629bf))
+
+
+### Bug Fixes
+
+* multiple errors in oci push proccess ([5939e70](https://github.com/Toandos/toando/commit/5939e70fff05a21d77aa59c439851cdbd30f79ea))
+
 ## [1.1.0](https://github.com/Toandos/toando/compare/v1.0.0...v1.1.0) (2026-10-24)
 
 
