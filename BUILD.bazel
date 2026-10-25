@@ -11,7 +11,7 @@ gazelle_test(
 multirun(
     name = "publish_all",
     commands = [
-        "//products/hosting/app-service/app:push_image"
+        "//products/hosting/app-service/app:push_image",
     ],
-    jobs = 0
+    jobs = 0,
 )

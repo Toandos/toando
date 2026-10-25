@@ -11,8 +11,9 @@ bazel_dep(name = "gazelle", version = "0.54.0")
 oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
 oci.pull(
     name = "distroless_static",
-    digest = "sha256:c06ad1f787b0d2d3e4142f1cc03328e3791000bb7a79f538da247f08d667c2bb",
+    digest = "sha256:d75cdd72874d4790092fcb1b058493ecf6bb5bf2b2b897045b00ff01d91843f2",
     image = "gcr.io/distroless/static-debian12",
+    platforms = ["linux/amd64"]
 )
 use_repo(oci, "distroless_static")
 
