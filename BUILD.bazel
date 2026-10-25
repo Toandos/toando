@@ -1,8 +1,17 @@
 load("@gazelle//:def.bzl", "gazelle", "gazelle_test")
+load("@rules_multirun//:defs.bzl", "multirun")
 
 gazelle(name = "gazelle")
 
 gazelle_test(
     name = "gazelle_test",
     workspace = "//:BUILD.bazel",
+)
+
+multirun(
+    name = "publish_all",
+    commands = [
+        "//products/hosting/app-service/app:push_image"
+    ],
+    jobs = 0
 )

@@ -20,6 +20,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup bazel
         uses: bazel-contrib/setup-bazel@0.19.1
         with:
@@ -29,3 +36,6 @@ jobs:
 
       - name: Bazel build
         run: bazel build //...
+
+      - name: Bazel publish all
+        run: bazel run //:publish_all
